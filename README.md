@@ -4,9 +4,11 @@ This repository contains solutions to assignments completed during the Summer Tr
 
 ## Student Details
 
-Name: Yash Vardhan Singh
-Roll Number: 2401920130218
-Branch: Information Technology (IT)
+| Field       | Details                     |
+| ----------- | --------------------------- |
+| Name        | Yash Vardhan Singh          |
+| Roll Number | 2401920130218               |
+| Branch      | Information Technology (IT) |
 
 ## Domains Covered
 
