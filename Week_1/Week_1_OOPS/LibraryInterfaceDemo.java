@@ -1,35 +1,49 @@
-public class LibraryInterfaceDemo {
+import java.util.Scanner;
 
+public class LibraryInterfaceDemo {
     public static void main(String[] args) {
 
-        KidUser kid = new KidUser();
+        Scanner sc = new Scanner(System.in);
 
-        kid.age = 10;
-        kid.registerAccount();
+        System.out.println("Choose User Type:");
+        System.out.println("1. Kid User");
+        System.out.println("2. Adult User");
 
-        kid.age = 18;
-        kid.registerAccount();
+        int choice = sc.nextInt();
+        sc.nextLine();
 
-        kid.bookType = "Kids";
-        kid.requestBook();
+        if (choice == 1) {
+            KidUser kid = new KidUser();
 
-        kid.bookType = "Fiction";
-        kid.requestBook();
+            System.out.print("Enter Age: ");
+            kid.age = sc.nextInt();
+            sc.nextLine();
 
-        System.out.println();
+            kid.registerAccount();
 
-        AdultUser adult = new AdultUser();
+            System.out.print("Enter Book Type: ");
+            kid.bookType = sc.nextLine();
 
-        adult.age = 5;
-        adult.registerAccount();
+            kid.requestBook();
 
-        adult.age = 23;
-        adult.registerAccount();
+        } else if (choice == 2) {
+            AdultUser adult = new AdultUser();
 
-        adult.bookType = "Kids";
-        adult.requestBook();
+            System.out.print("Enter Age: ");
+            adult.age = sc.nextInt();
+            sc.nextLine();
 
-        adult.bookType = "Fiction";
-        adult.requestBook();
+            adult.registerAccount();
+
+            System.out.print("Enter Book Type: ");
+            adult.bookType = sc.nextLine();
+
+            adult.requestBook();
+
+        } else {
+            System.out.println("Invalid Choice!");
+        }
+
+        sc.close();
     }
 }
